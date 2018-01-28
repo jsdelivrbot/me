@@ -1,4 +1,10 @@
 .Projects {
   background: teal;
   min-height: 400px;
+  padding: 24px 0;
+}
+
+.Projects .card-columns {
+  // TODO: add mobile changes to column-count
+  column-count: 6;
 }

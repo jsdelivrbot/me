@@ -10,7 +10,7 @@ const Masthead = () => {
     <div className="Masthead">
       <img src={logo} className="App-logo" alt="logo" />
       <h2 className="App-title">CHRISVOGT.me</h2>
-      <span>Software Engineer in San Francisco</span>
+      <p className="lead">Software Engineer <span>in San Francisco</span></p>
     </div>
   );
 };
