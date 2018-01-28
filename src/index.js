@@ -5,9 +5,12 @@ import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 
 import App from './App';
+import { loadQuotes } from './actions/quotesActions';
 import registerServiceWorker from './registerServiceWorker';
 
 import './styles/index.css';
+
+store.dispatch(loadQuotes);
 
 ReactDOM.render(
   <Provider store={store}>
