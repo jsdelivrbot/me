@@ -40,7 +40,7 @@ export default class TopNav extends React.Component {
               <NavItem>
                 <NavLink href="/components/">Developer Story</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
+              <UncontrolledDropdown nav>
                 <DropdownToggle nav caret>
                   Options
                 </DropdownToggle>
