@@ -6,12 +6,16 @@ import store, { history } from './store'
 
 import App from './App';
 import { loadProjects } from './actions/projectsActions';
+import { loadSocial } from './actions/socialActions';
+import { loadStats } from './actions/statsActions';
 import { loadQuotes } from './actions/quotesActions';
 import registerServiceWorker from './registerServiceWorker';
 
 import './styles/index.css';
 
 store.dispatch(loadProjects);
+store.dispatch(loadSocial);
+store.dispatch(loadStats);
 store.dispatch(loadQuotes);
 
 ReactDOM.render(
