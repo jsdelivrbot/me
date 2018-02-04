@@ -4,20 +4,25 @@ import { Link } from 'react-router-dom';
 import { Card, CardBody } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
-// import '../styles/components/SocialItem.css';
-
 const SocialItem = props => {
+  const { 
+    href,
+    reactIcon
+  } = props;
   return (
     <li className="list-inline-item">
-      <Link to='https://www.google.com'>
-        <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
+      <Link to={ href }>
+        <FontAwesomeIcon icon={["fab", reactIcon]} />
       </Link>
     </li>
   );
 };
 
 SocialItem.propTypes = {
-  children: PropTypes.node
+  href: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  reactIcon: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired
 }
 
 export default SocialItem;
