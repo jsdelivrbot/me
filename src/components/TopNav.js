@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -34,6 +35,9 @@ export default class TopNav extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink tag={ Link } to='/about' >About</NavLink>
+              </NavItem>            
               <NavItem>
                 <NavLink href="/components/">Stats</NavLink>
               </NavItem>

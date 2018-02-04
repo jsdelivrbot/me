@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Container, CardDeck, CardColumns } from 'reactstrap';
+import { Card, CardHeader, CardTitle, CardText, CardBody, Button, CardFooter, CardImg, Container, CardDeck, CardColumns } from 'reactstrap';
 
 import ProjectCard from './ProjectCard';
 
@@ -10,7 +10,9 @@ import '../styles/components/Projects.css';
 class Projects extends React.Component {
   render() {
     const { projects } = this.props;
-    const projectItems = Object.keys(projects).map(projectName => {
+    const projectItems = Object.keys(projects)
+    .slice(4,7)
+    .map(projectName => {
       const project = projects[projectName];
       const props = {
         key: project.slug,
@@ -22,15 +24,14 @@ class Projects extends React.Component {
     return (
       <div className="Projects">
         <Container>
-          <CardColumns>
+          <CardDeck>
             { projectItems }
-          </CardColumns>
+          </CardDeck>
         </Container>
       </div>
     );
   }
 }
-
 
 const mapStateToProps = state => {
   const { projects } = state;

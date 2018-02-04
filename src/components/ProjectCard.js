@@ -1,13 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Button, CardImg, CardTitle, CardText,
-  CardSubtitle, CardBody } from 'reactstrap';
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  CardImg,
+  CardSubtitle,
+  CardText,
+  CardTitle } from 'reactstrap';
 
 const ProjectCard = props => {
+  const {
+    bannerUrl,
+    name,
+    published,
+    slug
+  } = props;
   return (
-    <div className='Card w-150 mb-4'>
-      <CardImg top src={props.thumbUrl} alt={props.name} />
-    </div>
+    <Card>
+      <CardHeader tag="h6">Project</CardHeader>
+      <CardImg top width="100%" src={ bannerUrl } alt={ name } />
+      <CardBody>
+        <CardTitle>{ name }</CardTitle>
+        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+        <Button>{ slug }</Button>
+      </CardBody>
+      <CardFooter className="text-muted">
+        Visit Site | View Source On GitHub
+      </CardFooter>
+    </Card>
   );
 };
 

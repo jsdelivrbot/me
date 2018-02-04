@@ -1,18 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
+
+import StatsCard from './StatsCard';
 
 import '../styles/components/Stats.css';
 
-const Stats = () => {
-  return (
-    <div className="Stats">
-      <div className="d-flex justify-content-center">
-        <div className="p-2">Flex item</div>
-        <div className="p-2">Flex item</div>
+class Stats extends React.Component {
+  render() {
+    const { projects, totalTimeInWords } = this.props;
+    const projectCount = Object.keys(projects).length;
+    return (
+      <div className="Stats">
+        <div className="d-flex justify-content-center">
+          <StatsCard>
+            { totalTimeInWords }
+          </StatsCard>
+          <StatsCard>
+            { projectCount } Projects Published
+          </StatsCard>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+}
+
+const mapStateToProps = state => {
+  const {
+    projects,
+    stats: { totalTimeInWords = '' }
+  } = state;
+  return {
+    projects,
+    totalTimeInWords
+  }
 };
 
-export default Stats;
+export default connect(mapStateToProps)(Stats);

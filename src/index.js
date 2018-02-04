@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 
-import App from './App';
+import App from './components/App';
 import { loadProjects } from './actions/projectsActions';
 import { loadSocial } from './actions/socialActions';
 import { loadStats } from './actions/statsActions';
@@ -21,9 +21,7 @@ store.dispatch(loadQuotes);
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <div>
-        <App />
-      </div>
+      <App />
     </ConnectedRouter>
   </Provider>  
 , document.getElementById('root'));
