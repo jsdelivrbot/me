@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardBody } from 'reactstrap';
+import { Card } from 'reactstrap';
 
 import '../styles/components/Projects.css';
 
 const StatsCard = ({ children }) => {
   return (
-    <Card className='StatsCard'>
-      <CardBody>
-        { children }
-      </CardBody>
+    <Card body outline color='secondary' className='StatsCard'>
+      { children }
     </Card>
   );
 };

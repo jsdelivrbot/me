@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Container } from 'reactstrap';
 
 import StatsCard from './StatsCard';
 
@@ -12,14 +13,14 @@ class Stats extends React.Component {
     const projectCount = Object.keys(projects).length;
     return (
       <div className="Stats">
-        <div className="d-flex justify-content-center">
+        <Container className="d-flex justify-content-center">
           <StatsCard>
             { totalTimeInWords }
           </StatsCard>
           <StatsCard>
             { projectCount } Projects Published
           </StatsCard>
-        </div>
+        </Container>
       </div>
     );
   }
