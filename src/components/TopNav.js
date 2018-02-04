@@ -9,6 +9,8 @@ import {
   NavItem,
   NavLink } from 'reactstrap';
 
+import '../styles/components/TopNav.css';
+
 export default class TopNav extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +28,7 @@ export default class TopNav extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color='dark' dark expand='md'>
+        <Navbar color='www' dark expand='md'>
           <NavbarBrand tag={ Link } to='/'>chrisvogt.me</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

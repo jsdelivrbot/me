@@ -15,10 +15,10 @@ class Stats extends React.Component {
       <div className="Stats">
         <Container className="d-flex justify-content-center">
           <StatsCard>
-            { totalTimeInWords }
+            { totalTimeInWords } coding personal projects this month
           </StatsCard>
           <StatsCard>
-            { projectCount } Projects Published
+            { projectCount } projects published
           </StatsCard>
         </Container>
       </div>
