@@ -25,11 +25,8 @@ const ProjectCard = props => {
       <CardBody>
         <CardTitle>{ name }</CardTitle>
         <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-        <Button>{ slug }</Button>
+        <Button color='primary'>View Project</Button>
       </CardBody>
-      <CardFooter className="text-muted">
-        Visit Site | View Source On GitHub
-      </CardFooter>
     </Card>
   );
 };

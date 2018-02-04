@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button, Col, Container, Row } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
-import Social from './Social';
+import Social from './SocialContainer';
 
 import '../styles/components/Footer.css';
 

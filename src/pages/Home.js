@@ -3,28 +3,25 @@ import PropTypes from 'prop-types';
 import { Container } from 'reactstrap';
 
 import Masthead from '../components/Masthead';
-import Photography from '../components/Photography';
-import Projects from '../components/Projects';
-import Stats from '../components/Stats';
-import TitlePanel from '../components/TitlePanel';
+import Projects from '../components/ProjectsContainer';
+import Stats from '../components/StatsContainer';
+import PageTitle from '../components/PageTitle';
 
 // import '../styles/components/Photography.css';
 
 const Home = () => {
   return (
-    <div className="Home">
-      <header className="App-header">
+    <div className='Home'>
+      <header className='App-header'>
         <Masthead />
       </header>
 
       <Stats />
 
-      <Container>
-        <TitlePanel
-          title='Dashboard'
-          subtitle='Recent Content'
-        />
-      </Container>
+      <PageTitle
+        title='Dashboard'
+        subtitle='Recent Content'
+      />
 
       <Projects />
     </div>

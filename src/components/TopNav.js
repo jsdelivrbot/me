@@ -30,19 +30,19 @@ export default class TopNav extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="dark" dark expand="md">
+        <Navbar color='dark' dark expand='md'>
           <NavbarBrand tag={ Link } to='/'>chrisvogt.me</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav className='ml-auto' navbar>
               <NavItem>
                 <NavLink tag={ Link } to='/about' >About</NavLink>
               </NavItem>            
               <NavItem>
-                <NavLink href="/components/">Stats</NavLink>
+                <NavLink href='#'>Stats</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Developer Story</NavLink>
+                <NavLink href='#'>Developer Story</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

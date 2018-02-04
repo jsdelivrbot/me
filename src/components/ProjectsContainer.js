@@ -1,7 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Card, CardHeader, CardTitle, CardText, CardBody, Button, CardFooter, CardImg, Container, CardDeck, CardColumns } from 'reactstrap';
+import {
+  Button,
+  Card,
+  CardBody,
+  CardColumns,
+  CardDeck,
+  CardFooter,
+  CardHeader,
+  CardImg,
+  CardText,
+  CardTitle,
+  Container
+} from 'reactstrap';
 
 import ProjectCard from './ProjectCard';
 
@@ -11,7 +23,7 @@ class Projects extends React.Component {
   render() {
     const { projects } = this.props;
     const projectItems = Object.keys(projects)
-    .slice(4,7)
+    .slice(3,6)
     .map(projectName => {
       const project = projects[projectName];
       const props = {
