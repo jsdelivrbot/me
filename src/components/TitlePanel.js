@@ -12,7 +12,7 @@ const TitlePanel = props => {
           <h3>
             Recent Photography.
 
-            <small class="text-muted">Click on a thumbnail to view in Instagram.</small>
+            <small className="text-muted">Click on a thumbnail to view in Instagram.</small>
           </h3>
         </Col>
         <Col xs="12" md="2">
