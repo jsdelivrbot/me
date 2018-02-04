@@ -3,10 +3,9 @@ import { Route, Link } from 'react-router-dom';
 import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
-import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-pro-light';
+import proLight from '@fortawesome/fontawesome-pro-light';
 
 import Footer from './Footer';
-import Social from './Social';
 import TopNav from './TopNav';
 
 import Home from '../pages/Home';
@@ -18,7 +17,7 @@ import '../styles/components/App.css';
 class App extends Component {
   constructor() {
     super(...arguments);
-    fontawesome.library.add(brands, faCheckSquare, faCoffee);
+    fontawesome.library.add(brands, proLight);
   }
   render() {
     return (
@@ -28,7 +27,6 @@ class App extends Component {
         <Route exact path='/' component={ Home }/>
         <Route path='/about' component={ About }/>
 
-        <Social />
         <Footer />
       </div>
     );

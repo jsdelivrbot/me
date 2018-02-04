@@ -20,9 +20,10 @@ const Home = () => {
       <Stats />
 
       <Container>
-        <TitlePanel right={
-          <div>Btn</div>
-        } />
+        <TitlePanel
+          title='Dashboard'
+          subtitle='Recent Content'
+        />
       </Container>
 
       <Projects />

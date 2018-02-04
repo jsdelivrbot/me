@@ -30,8 +30,8 @@ export default class TopNav extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light expand="md">
-          <NavbarBrand href="/">chrisvogt.me</NavbarBrand>
+        <Navbar color="dark" dark expand="md">
+          <NavbarBrand tag={ Link } to='/'>chrisvogt.me</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -44,23 +44,6 @@ export default class TopNav extends React.Component {
               <NavItem>
                 <NavLink href="/components/">Developer Story</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu >
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>

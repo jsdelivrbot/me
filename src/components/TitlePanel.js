@@ -5,14 +5,19 @@ import { Row, Col } from 'reactstrap';
 import '../styles/components/TitlePanel.css';
 
 const TitlePanel = props => {
+  const {
+    title,
+    subtitle
+  } = props;
   return (
     <div className="TitlePanel">
       <Row>
         <Col className="text-md-left" xs="12" md="10">
           <h3>
-            Recent Photography.
-
-            <small className="text-muted">Click on a thumbnail to view in Instagram.</small>
+            { title }
+            {subtitle &&
+              <small className="text-muted">{ subtitle }</small>
+            }
           </h3>
         </Col>
         <Col xs="12" md="2">
@@ -24,7 +29,7 @@ const TitlePanel = props => {
 };
 
 TitlePanel.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   subtitle: PropTypes.string
 };
 

@@ -1,22 +1,31 @@
 import React from 'react';
-import { Col, Container, Row } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { Button, Col, Container, Row } from 'reactstrap';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+
+import Social from './Social';
 
 import '../styles/components/Footer.css';
 
 const Footer = () => {
   return (
-    <div className="Footer">
-      <Container>
-        <Row>
-          <Col className='text-left'>
-            Made with A + B by  @C1V0 in San Francisco, CA
-          </Col>
-          <Col className='text-right'>
-            <a href='#'>Link One</a>
-            <a href='#'>Link Two</a>
-          </Col>
-        </Row>
-      </Container>
+    <div>
+      <Social />
+      <div className="Footer bg-dark text-white">
+        <Container>
+          <Row>
+            <Col xs='12' lg='6' className='text-lg-left'>
+              Made with <FontAwesomeIcon icon={['fal', 'code']} /> +{' '}
+              <FontAwesomeIcon icon={['fal', 'heart']} />{' '}
+              by Chris Vogt in San Francisco, CA
+            </Col>
+            <Col xs='12' lg='6' className='text-lg-right'>
+              <Button color="link">Stats</Button>{' '}
+              <Button color="link">Developer Story</Button>{' '}
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 };
