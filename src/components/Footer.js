@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Button, Col, Container, Row } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
+import Quotes from './QuotesContainer';
 import Social from './SocialContainer';
 
 import '../styles/components/Footer.css';
@@ -10,6 +10,7 @@ import '../styles/components/Footer.css';
 const Footer = () => {
   return (
     <div>
+      <Quotes />
       <Social />
       <div className="Footer bg-dark text-white">
         <Container>

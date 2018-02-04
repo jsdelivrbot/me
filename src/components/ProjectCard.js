@@ -1,21 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   Button,
   Card,
   CardBody,
-  CardFooter,
   CardHeader,
   CardImg,
-  CardSubtitle,
   CardText,
   CardTitle } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const ProjectCard = props => {
   const {
     bannerUrl,
+    description,
     name,
-    published,
     slug
   } = props;
   return (
@@ -24,8 +23,10 @@ const ProjectCard = props => {
       <CardImg top width="100%" src={ bannerUrl } alt={ name } />
       <CardBody>
         <CardTitle>{ name }</CardTitle>
-        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-        <Button color='primary'>View Project</Button>
+        <CardText>{ description }</CardText>
+        <Link to={ `/project/${ slug }` }>
+          <Button color='primary'>View Project</Button>
+        </Link>
       </CardBody>
     </Card>
   );
@@ -33,6 +34,7 @@ const ProjectCard = props => {
 
 ProjectCard.propTypes = {
   bannerUrl: PropTypes.string,
+  description: PropTypes.string,
   id: PropTypes.number,
   name: PropTypes.string,
   published: PropTypes.bool,

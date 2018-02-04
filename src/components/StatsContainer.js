@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Container, Row, Col } from 'reactstrap';
 
 import StatsCard from './StatsCard';
 
@@ -35,6 +34,11 @@ const mapStateToProps = state => {
     projects,
     totalTimeInWords
   }
+};
+
+Stats.propTypes = {
+  projects: PropTypes.object.isRequired,
+  totalTimeInWords: PropTypes.string.isRequired
 };
 
 export default connect(mapStateToProps)(Stats);

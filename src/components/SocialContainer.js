@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container } from 'reactstrap';
@@ -7,7 +7,7 @@ import SocialItem from './SocialItem';
 
 import '../styles/components/Social.css';
 
-class Social extends React.Component {
+class Social extends Component {
   render() {
     const { social } = this.props;
     const socialItems = Object.keys(social).map(item => {
@@ -30,6 +30,10 @@ class Social extends React.Component {
     );
   }
 }
+
+Social.propTypes = {
+  social: PropTypes.object.isRequired
+};
 
 const mapStateToProps = state => {
   const { social } = state;

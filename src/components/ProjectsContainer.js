@@ -2,16 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
-  Button,
-  Card,
-  CardBody,
-  CardColumns,
   CardDeck,
-  CardFooter,
-  CardHeader,
-  CardImg,
-  CardText,
-  CardTitle,
   Container
 } from 'reactstrap';
 
@@ -50,6 +41,10 @@ const mapStateToProps = state => {
   return {
     projects
   }
+};
+
+Projects.propTypes = {
+  projects: PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps)(Projects);

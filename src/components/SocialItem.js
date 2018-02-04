@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Card, CardBody } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 const SocialItem = props => {

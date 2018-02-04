@@ -4,11 +4,11 @@ import { Card, CardBody } from 'reactstrap';
 
 import '../styles/components/Projects.css';
 
-const StatsCard = props => {
+const StatsCard = ({ children }) => {
   return (
     <Card className='StatsCard'>
       <CardBody>
-        { props.children }
+        { children }
       </CardBody>
     </Card>
   );
