@@ -13,16 +13,13 @@ const PageTitle = props => {
     <div className="PageTitle">
       <Container>
         <Row>
-          <Col className="text-md-left" xs="12" md="10">
+          <Col className="text-md-left">
             <h3>
               { title }
               {subtitle &&
                 <small className="text-muted">{ subtitle }</small>
               }
             </h3>
-          </Col>
-          <Col xs="12" md="2">
-            { props.right }
           </Col>
         </Row>
       </Container>

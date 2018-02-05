@@ -14,6 +14,7 @@ class Projects extends React.Component {
   render() {
     const { projects } = this.props;
     const projectItems = Object.keys(projects)
+    .filter(project => projects[project].published === true)
     .slice(3,6)
     .map(projectName => {
       const project = projects[projectName];

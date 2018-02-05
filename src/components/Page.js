@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import '../styles/components/Page.css';
 
@@ -9,8 +10,14 @@ const Page = props => {
     name = 'default'
   } = props;
   return (
-    <div className={ `Page page-${ name }` }>
-      { children }
+    <div>
+      <Helmet>
+        <title>{ name }</title>
+      </Helmet>
+
+      <div className={ `Page page-${ name }` }>
+        { children }
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 
 const ProjectCard = props => {
   const {
-    bannerUrl,
+    banner_url: bannerUrl,
     description,
     name,
     slug
@@ -23,7 +23,7 @@ const ProjectCard = props => {
       <CardImg top width="100%" src={ bannerUrl } alt={ name } />
       <CardBody>
         <CardTitle>{ name }</CardTitle>
-        <CardText>{ description }</CardText>
+        <CardText className='d-sm-none d-md-block'>{ description }</CardText>
         <Link to={ `/project/${ slug }` }>
           <Button color='www btn-primary'>View Project</Button>
         </Link>

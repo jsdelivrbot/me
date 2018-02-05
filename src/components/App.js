@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import proLight from '@fortawesome/fontawesome-pro-light';
@@ -7,8 +8,9 @@ import proLight from '@fortawesome/fontawesome-pro-light';
 import Footer from './Footer';
 import TopNav from './TopNav';
 
-import Home from '../pages/Home';
 import About from '../pages/About';
+import Home from '../pages/Home';
+import Project from '../pages/Project';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/components/App.css';
@@ -20,13 +22,21 @@ class App extends Component {
   }
   render() {
     return (
-      <div className='App'>
-        <TopNav />
+      <div>
+        <Helmet>
+          <meta charSet='utf-8' />
+          <title>{ 'www.chrisvogt.me' }</title>
+        </Helmet>
 
-        <Route exact path='/' component={ Home }/>
-        <Route path='/about' component={ About }/>
+        <div className='App'>
+          <TopNav />
 
-        <Footer />
+          <Route exact path='/' component={ Home } />
+          <Route path='/about' component={ About } />
+          <Route path='/project/:slug' component={ Project } />
+
+          <Footer />
+        </div>
       </div>
     );
   }
