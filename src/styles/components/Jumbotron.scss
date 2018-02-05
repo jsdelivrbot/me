@@ -9,13 +9,21 @@
   background: -ms-linear-gradient(45deg, rgba(69, 39, 160, 1) 0%, rgba(113, 30, 155, 1) 100%);
   background: linear-gradient(45deg, rgba(69, 39, 160, 1) 0%, rgba(113, 30, 155, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4527a0', endColorstr='#711e9b', GradientType=1 );
+
+  position: relative;
 }
 
 .Jumbotron h2 {
-  font-family: Quicksand,sans-serif;
+  font-family: $default-headline-font;
   font-size: 2.124em;
+
+  margin-bottom: 0;
 
   @media only screen and (min-width: $lg) {
     font-size: 3.124em;
   }
+}
+
+.Jumbotron p {
+  font-family: $default-headline-font;
 }

@@ -25,7 +25,7 @@ const ProjectCard = props => {
         <CardTitle>{ name }</CardTitle>
         <CardText className='d-sm-none d-md-block'>{ description }</CardText>
         <Link to={ `/project/${ slug }` }>
-          <Button color='www btn-primary'>View Project</Button>
+          <Button className='btn-elevated' color='www btn-primary'>View Project</Button>
         </Link>
       </CardBody>
     </Card>

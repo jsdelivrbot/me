@@ -4,6 +4,7 @@ import '../styles/components/Jumbotron.css';
 
 const Jumbotron = props => {
   const {
+    children,
     headline,
     subhead
   } = props;
@@ -15,6 +16,7 @@ const Jumbotron = props => {
       {subhead &&
         <p className="lead">{ subhead }</p>
       }
+      { children }
     </div>
   );
 };

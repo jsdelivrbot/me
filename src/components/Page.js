@@ -7,12 +7,13 @@ import '../styles/components/Page.css';
 const Page = props => {
   const { 
     children,
-    name = 'default'
+    name = 'default',
+    title = ''
   } = props;
   return (
     <div>
       <Helmet>
-        <title>{ name }</title>
+        <title>{ title || name }</title>
       </Helmet>
 
       <div className={ `Page page-${ name }` }>

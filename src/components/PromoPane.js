@@ -19,9 +19,11 @@ const PromoPane = () => {
             </p>
           </Col>
           <Col xs="12" md="4">
-            <Button block color='www btn-primary'>
-              stats.chrisvogt.me
-            </Button>
+            <a href='https://stats.chrisvogt.me' title='Chris Vogt — developer stats'>
+              <Button className='btn-elevated' block color='www btn-primary'>
+                stats.chrisvogt.me
+              </Button>
+            </a>
           </Col>
         </Row>
       </Container>

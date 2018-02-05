@@ -27,7 +27,7 @@ export default class TopNav extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className='TopNav'>
         <Navbar color='www' dark expand='md'>
           <NavbarBrand tag={ Link } to='/'>chrisvogt.me</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />

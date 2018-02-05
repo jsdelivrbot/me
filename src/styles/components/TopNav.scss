@@ -1,8 +1,12 @@
+@import '../includes';
+
 .bg-www {
-  -webkit-transition: background 1s ease;
-  transition: background 1s ease;
   background: #0a2364;
   background: -webkit-gradient(left top,right bottom,color-stop(0,#0a2364),color-stop(100%,#711e9b));
   background: linear-gradient(135deg,#0a2364,#711e9b);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a2364",endColorstr="#711e9b",GradientType=1);
+}
+
+.TopNav .navbar-brand {
+  font-family: $default-headline-font;
 }

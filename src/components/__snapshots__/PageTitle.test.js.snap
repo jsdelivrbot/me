@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div
+  className="PageTitle"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="text-md-left col"
+      >
+        <h3>
+          Foo Bar
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+`;

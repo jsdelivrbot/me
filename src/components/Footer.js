@@ -15,16 +15,12 @@ const Footer = () => {
       <div className="Footer bg-dark text-white">
         <Container>
           <Row>
-            <Col xs='12' lg='6' className='text-lg-left'>
+            <Col xs='12'>
               <small>
                 Made with <FontAwesomeIcon icon={['fal', 'code']} /> +{' '}
                 <FontAwesomeIcon icon={['fal', 'heart']} />{' '}
                 by Chris Vogt in San Francisco, CA
               </small>
-            </Col>
-            <Col xs='12' lg='6' className='text-lg-right'>
-              <Button color="link">Stats</Button>{' '}
-              <Button color="link">Developer Story</Button>{' '}
             </Col>
           </Row>
         </Container>
