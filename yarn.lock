@@ -4524,6 +4524,10 @@ minimist@~0.0.1:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
+mixpanel-browser@^2.17.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/mixpanel-browser/-/mixpanel-browser-2.17.0.tgz#c86b4dffdc16f71fdfbb1fb4c692f99d954e936b"
+
 mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
@@ -5716,6 +5720,10 @@ react-helmet@^5.2.0:
     object-assign "^4.1.1"
     prop-types "^15.5.4"
     react-side-effect "^1.1.0"
+
+react-mixpanel@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/react-mixpanel/-/react-mixpanel-0.0.11.tgz#4f535426fd6ff7de58a133543d6df569a55ab06e"
 
 react-popper@^0.7.2:
   version "0.7.5"

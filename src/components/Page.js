@@ -4,12 +4,17 @@ import { Helmet } from 'react-helmet';
 
 import '../styles/components/Page.css';
 
-const Page = props => {
+const Page = (props, context) => {
   const { 
     children,
     name = 'default',
     title = ''
   } = props;
+
+  context.mixpanel.track('Pageview', {
+    'Page Name': name
+  });
+
   return (
     <div>
       <Helmet>
@@ -26,6 +31,10 @@ const Page = props => {
 Page.propTypes = {
   children: PropTypes.node.isRequired,
   name: PropTypes.string
+};
+
+Page.contextTypes = {
+  mixpanel: PropTypes.object.isRequired
 };
 
 export default Page;
