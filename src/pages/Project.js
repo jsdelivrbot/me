@@ -21,7 +21,7 @@ const Project = props => {
   const project = findBySlug(props.projects, props.match.params.slug)[0];
   return (
     <Page name='Project'>
-      <Jumbotron headline='Project' />
+      <Jumbotron headline='PROJECT' />
       <Container className='text-left'>
         {project &&
           <div>

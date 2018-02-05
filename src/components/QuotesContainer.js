@@ -31,14 +31,14 @@ class QuotesContainer extends Component {
   next() {
     if (this.animating) return;
     const { quotes } = this.props;
-    const nextIndex = this.state.activeIndex === quotes.length - 1 ? 0 : this.state.activeIndex + 1;
+    const nextIndex = this.state.activeIndex === Object.keys(quotes).length - 1 ? 0 : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
   }
 
   previous() {
     if (this.animating) return;
     const { quotes } = this.props;
-    const nextIndex = this.state.activeIndex === 0 ? quotes.length - 1 : this.state.activeIndex - 1;
+    const nextIndex = this.state.activeIndex === 0 ? Object.keys(quotes).length - 1 : this.state.activeIndex - 1;
     this.setState({ activeIndex: nextIndex });
   }
 
@@ -61,7 +61,7 @@ class QuotesContainer extends Component {
           <blockquote className='blockquote text-center'>
             <p className='mb-0'>{ quote.text }</p>
             <footer className='blockquote-footer'>
-              <cite title='Source Title'>{ quote.cite }</cite>
+              { quote.cite }
             </footer>
           </blockquote>
         </CarouselItem>
@@ -70,13 +70,23 @@ class QuotesContainer extends Component {
     return (
       <div className='Quotes'>
         <Carousel
-          activeIndex={activeIndex}
-          next={this.next}
-          previous={this.previous}
+          activeIndex={ activeIndex }
+          interval={ 6000 }
+          next={ this.next }
+          previous={ this.previous }
+          ride='carousel'
         >
           { quoteItems }
-          <CarouselControl direction='prev' directionText='Previous' onClickHandler={this.previous} />
-          <CarouselControl direction='next' directionText='Next' onClickHandler={this.next} />
+          <CarouselControl
+            direction='prev'
+            directionText='Previous'
+            onClickHandler={ this.previous }
+          />
+          <CarouselControl
+            direction='next'
+            directionText='Next'
+            onClickHandler={ this.next }
+          />
         </Carousel>
       </div>
     );

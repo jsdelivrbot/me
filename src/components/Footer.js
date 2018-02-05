@@ -16,9 +16,11 @@ const Footer = () => {
         <Container>
           <Row>
             <Col xs='12' lg='6' className='text-lg-left'>
-              Made with <FontAwesomeIcon icon={['fal', 'code']} /> +{' '}
-              <FontAwesomeIcon icon={['fal', 'heart']} />{' '}
-              by Chris Vogt in San Francisco, CA
+              <small>
+                Made with <FontAwesomeIcon icon={['fal', 'code']} /> +{' '}
+                <FontAwesomeIcon icon={['fal', 'heart']} />{' '}
+                by Chris Vogt in San Francisco, CA
+              </small>
             </Col>
             <Col xs='12' lg='6' className='text-lg-right'>
               <Button color="link">Stats</Button>{' '}

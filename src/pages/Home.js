@@ -14,7 +14,7 @@ const Home = () => {
     <Page name='Home'>
       <header className='App-header'>
         <Jumbotron
-          headline={ 'CHRISVOGT.me' }
+          headline={ 'CHRIS VOGT' }
           subhead={ 'Software Engineer in San Francisco' }
         />
       </header>

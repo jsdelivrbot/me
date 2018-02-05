@@ -14,12 +14,16 @@ class Stats extends React.Component {
     return (
       <div className="Stats">
         <Container className="d-flex justify-content-center">
-          <StatsCard>
-            { totalTimeInWords } coding personal projects this month
-          </StatsCard>
-          <StatsCard>
-            { projectCount } projects published
-          </StatsCard>
+          {totalTimeInWords &&
+            <StatsCard>
+              { totalTimeInWords } spent coding
+            </StatsCard>
+          }
+          {projectCount &&
+            <StatsCard>
+              { projectCount } projects published
+            </StatsCard>
+          }
         </Container>
       </div>
     );

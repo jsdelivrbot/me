@@ -6,13 +6,14 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 const SocialItem = props => {
   const { 
     href,
+    name,
     reactIcon
   } = props;
   return (
     <li className="list-inline-item">
-      <Link to={ href }>
+      <a href={ href } title={ `Visit on ${name}` }>
         <FontAwesomeIcon icon={["fab", reactIcon]} />
-      </Link>
+      </a>
     </li>
   );
 };

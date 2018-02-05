@@ -1,3 +1,5 @@
+@import '../includes';
+
 .Social {
   background: #4527a0;
   background: -moz-linear-gradient(45deg, #4527a0 0%, #711e9b 100%);
@@ -23,14 +25,14 @@
     margin: 0 14px;
   }
 
-  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  @media only screen and (min-width: $md) and (max-width: $xl) {
     .list-inline-item {
       margin: 0 48px;
       font-size: 2rem;
     }
   }
 
-  @media only screen and (min-width: 64.063em) {
+  @media only screen and (min-width: $xl) {
     .list-inline-item {
       margin: 0 64px;
       font-size: 2.675rem;
