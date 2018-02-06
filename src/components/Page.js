@@ -16,14 +16,11 @@ const Page = (props, context) => {
   });
 
   return (
-    <div>
+    <div className={ `Page page-${ name }` }>
       <Helmet>
         <title>{ title || name }</title>
       </Helmet>
-
-      <div className={ `Page page-${ name }` }>
-        { children }
-      </div>
+      { children }
     </div>
   );
 };
