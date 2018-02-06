@@ -1,20 +1,36 @@
+image: node:latest
+
+cache:
+  paths: 
+    - node_modules/
+
 build:
-  image: node:latest
   stage: build
   script:
     - npm install --global yarn
     - yarn
     - yarn run build
   artifacts:
-    expire_in: 1 week
     paths:
-      - dist
+      - build
 
 unit:
-  image: node:latest
   stage: test
   script:
     - npm install --global yarn
     - yarn
     - yarn run build-css
     - yarn run test
+
+pages:
+  stage: deploy
+  script:
+    - npm install --global yarn
+    - yarn
+    - yarn run build
+    - cp -r build public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
