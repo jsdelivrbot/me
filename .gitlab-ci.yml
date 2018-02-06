@@ -28,6 +28,7 @@ pages:
     - npm install --global yarn
     - yarn
     - yarn run build
+    - rm -r public
     - cp -r build public
   artifacts:
     paths:
