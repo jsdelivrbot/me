@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavLink as RRNavLink, Link } from 'react-router-dom';
 import {
   Collapse,
@@ -7,11 +7,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink } from 'reactstrap';
+  NavLink
+} from 'reactstrap';
 
 import '../styles/components/TopNav.css';
 
-export default class TopNav extends React.Component {
+export default class TopNav extends Component {
   constructor(props) {
     super(props);
 

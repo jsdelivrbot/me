@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
@@ -10,7 +10,7 @@ import ProjectCard from './ProjectCard';
 
 import '../styles/components/Projects.css';
 
-class Projects extends React.Component {
+class Projects extends Component {
   render() {
     const { projects } = this.props;
     const projectItems = Object.keys(projects)

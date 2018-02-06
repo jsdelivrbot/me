@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container } from 'reactstrap';
@@ -7,7 +7,7 @@ import StatsCard from './StatsCard';
 
 import '../styles/components/Stats.css';
 
-class Stats extends React.Component {
+class Stats extends Component {
   render() {
     const { projects, totalTimeInWords } = this.props;
     const projectCount = Object.keys(projects).length;

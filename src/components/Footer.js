@@ -9,10 +9,11 @@ import '../styles/components/Footer.css';
 
 const Footer = () => {
   return (
-    <div>
+    <div className='Footer'>
       <Quotes />
       <Social />
-      <div className="Footer bg-dark text-white">
+
+      <div className="Footer__lower bg-dark text-white">
         <Container>
           <Row>
             <Col xs='12'>
