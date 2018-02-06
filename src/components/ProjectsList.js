@@ -2,16 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
-  CardDeck,
-  Container,
   ListGroup,
   ListGroupItem,
   ListGroupItemHeading,
   ListGroupItemText
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
-import ProjectCard from './ProjectCard';
 
 import '../styles/components/Projects.css';
 
@@ -22,13 +18,18 @@ class ProjectsList extends Component {
     .filter(project => projects[project].published === true)
     .map(projectName => {
       const project = projects[projectName];
+      const { description, name, slug } = project;
       return (
-        <ListGroupItem tag={ Link } to={ `/projects/${ project.slug }` } action>
+        <ListGroupItem
+          action
+          key={ slug }
+          tag={ Link }
+          to={ `/projects/${ slug }` }>
           <ListGroupItemHeading>
-            { project.name }
+            { name }
           </ListGroupItemHeading>
           <ListGroupItemText>
-            { project.description }
+            { description }
           </ListGroupItemText>
         </ListGroupItem>
       );

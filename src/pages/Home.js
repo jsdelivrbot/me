@@ -32,7 +32,12 @@ const Home = () => {
       </header>
 
       <Stats />
-      <PromoPane />
+      <PromoPane
+        buttonText='stats.chrisvogt.me'
+        linkTitle='Chris Vogt — developer stats'
+        linkURL='https://stats.chrisvogt.me'
+        text='Review my coding habits from the last 30 days'
+      />
       
       <PageTitle
         title='Dashboard'

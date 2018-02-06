@@ -10,10 +10,10 @@ const Jumbotron = props => {
   } = props;
   return (
     <div className="Jumbotron text-white">
-      {headline &&
+      { headline &&
         <h2 className="App-title">{ headline }</h2>
       }
-      {subhead &&
+      { subhead &&
         <p className="lead">{ subhead }</p>
       }
       { children }

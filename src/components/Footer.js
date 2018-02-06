@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'reactstrap';
+import { Col, Container, Row } from 'reactstrap';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 import Quotes from './QuotesContainer';

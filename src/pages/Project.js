@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import Jumbotron from '../components/Jumbotron';
 import Page from '../components/Page';
-import PageTitle from '../components/PageTitle';
+import PromoPane from '../components/PromoPane';
 
 import '../styles/pages/Project.css';
 
@@ -20,32 +20,45 @@ const findBySlug = (projects, slug) => {
 const Project = props => {
   const project = findBySlug(props.projects, props.match.params.slug)[0];
   const title = project ? `${project.name} — Project » CHRISVOGT.me` : '';
-  const isSourceDisabled = project && project.github_url.length < 3;
-  const isDemoDisabled = project && project.demo_url.length < 3;
+
+  const formatDate = date => {
+    const dateObj = new Date(date);
+    const options = {  
+      weekday: 'long',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    };
+    return dateObj.toLocaleString('en-us', options);
+  };
 
   return (
     <Page name='Project' title={ title }>
-      <Jumbotron headline='PROJECT'>
-        <Button outline color='light' size='sm'>View All</Button>
+      <Jumbotron>
+        { project && <h2>{ project.name }</h2> }
+        { project && <p>{`Created: ${ formatDate(project.created) }`}</p> }
       </Jumbotron>
+      <PromoPane
+        buttonText='Browse Projects'
+        linkTitle='View All Projects'
+        linkURL='/projects'
+        text='Check out my other projects on this site.'
+      />
       <Container className='text-left'>
-        {project &&
+        { project &&
           <div>
             <Row>
               <Col xs='12' sm='4'>
-                <img style={ { width: '100%' } }src={ project.banner_url } alt="Generic placeholder image" />
+                <img style={ { width: '100%' } } src={ project.banner_url } alt={ project.name } />
               </Col>
               <Col xs='12' sm='8'>
-                <Row>
-                  <PageTitle title={ project.name } />
-                </Row>
                 <p>{ project.description }</p>
                 <a href={ project.demo_url } title={ project.name }>
-                  <Button outline color='primary' disabled={ isDemoDisabled }>View Demo</Button>
+                  <Button outline color='primary' disabled={ !project.demo_url }>View Demo</Button>
                 </a>
                 {' '}
                 <a href={ project.github_url } title={ project.name }>
-                  <Button outline color='secondary' disabled={ isSourceDisabled }>View Code</Button>
+                  <Button outline color='secondary' disabled={ !project.github_url }>View Code</Button>
                 </a>
               </Col>
             </Row>
