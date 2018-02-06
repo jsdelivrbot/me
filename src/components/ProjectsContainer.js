@@ -7,12 +7,13 @@ import {
 } from 'reactstrap';
 
 import ProjectCard from './ProjectCard';
+import Spinner from './Spinner';
 
 import '../styles/components/Projects.css';
 
 class Projects extends Component {
   render() {
-    const { projects } = this.props;
+    const { isLoading, projects } = this.props;
     const projectItems = Object.keys(projects)
     .filter(project => projects[project].published === true)
     .slice(3,6)
@@ -29,7 +30,8 @@ class Projects extends Component {
       <div className="Projects">
         <Container>
           <CardDeck>
-            { projectItems }
+            { isLoading && <Spinner /> }
+            { !isLoading && projectItems }
           </CardDeck>
         </Container>
       </div>
@@ -40,7 +42,8 @@ class Projects extends Component {
 const mapStateToProps = state => {
   const { projects } = state;
   return {
-    projects
+    projects,
+    isLoading: !Object.keys(projects).length
   }
 };
 

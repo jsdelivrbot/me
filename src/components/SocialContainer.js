@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container } from 'reactstrap';
 
+import Spinner from './Spinner';
 import SocialItem from './SocialItem';
 
 import '../styles/components/Social.css';
 
 class Social extends Component {
   render() {
-    const { social } = this.props;
+    const { isLoading, social } = this.props;
     const socialItems = Object.keys(social).map(item => {
       const socialItem = social[item];
       const props = {
@@ -23,7 +24,8 @@ class Social extends Component {
       <div className="Social">
         <Container>
           <ul className='list-inline'>
-            { socialItems }
+            { isLoading && <Spinner /> }
+            { !isLoading && socialItems }
           </ul>
         </Container>
       </div>
@@ -32,12 +34,14 @@ class Social extends Component {
 }
 
 Social.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
   social: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => {
   const { social } = state;
   return {
+    isLoading: !Object.keys(social).length,
     social
   }
 };
