@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`snapshot 1`] = `
+exports[`PageTitle _SNAPSHOT_ 1`] = `
 <div
   className="PageTitle"
 >
@@ -14,7 +14,12 @@ exports[`snapshot 1`] = `
         className="text-md-left col"
       >
         <h3>
-          Foo Bar
+          Foo
+          <small
+            className="text-muted"
+          >
+            Bar
+          </small>
         </h3>
       </div>
     </div>

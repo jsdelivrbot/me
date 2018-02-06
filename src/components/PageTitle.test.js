@@ -1,11 +1,28 @@
 import React from 'react';
-import PageTitle from './PageTitle';
 import renderer from 'react-test-renderer';
 
-test('snapshot', () => {
-  const component = renderer.create(
-    <PageTitle title='Foo Bar' />,
-  );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+import PageTitle from './PageTitle';
+
+describe('PageTitle', () => {
+  const makeComponent = customProps => {
+    const defaultProps = {
+      title: 'Foo',
+      subtitle: 'Bar'
+    };
+    const props = { ...defaultProps, ...customProps };
+    return renderer.create(
+      <PageTitle { ...props } />,
+    );
+  };
+
+  test('_SNAPSHOT_', () => {
+    const component = makeComponent();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should render without crashing', () => {
+    const component = makeComponent();
+    expect(component).toBe.ok;
+  });
 });
