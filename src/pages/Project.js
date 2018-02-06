@@ -20,9 +20,14 @@ const findBySlug = (projects, slug) => {
 const Project = props => {
   const project = findBySlug(props.projects, props.match.params.slug)[0];
   const title = project ? `${project.name} — Project » CHRISVOGT.me` : '';
+  const isSourceDisabled = project && project.github_url.length < 3;
+  const isDemoDisabled = project && project.demo_url.length < 3;
+
   return (
     <Page name='Project' title={ title }>
-      <Jumbotron headline='PROJECT' />
+      <Jumbotron headline='PROJECT'>
+        <Button outline color='light' size='sm'>View All</Button>
+      </Jumbotron>
       <Container className='text-left'>
         {project &&
           <div>
@@ -36,11 +41,11 @@ const Project = props => {
                 </Row>
                 <p>{ project.description }</p>
                 <a href={ project.demo_url } title={ project.name }>
-                  <Button outline color='primary'>View Demo</Button>
+                  <Button outline color='primary' disabled={ isDemoDisabled }>View Demo</Button>
                 </a>
                 {' '}
                 <a href={ project.github_url } title={ project.name }>
-                  <Button outline color='secondary'>View Code</Button>
+                  <Button outline color='secondary' disabled={ isSourceDisabled }>View Code</Button>
                 </a>
               </Col>
             </Row>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink as RRNavLink, Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -34,10 +34,22 @@ export default class TopNav extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className='ml-auto' navbar>
               <NavItem>
-                <NavLink tag={ Link } to='/about' >About</NavLink>
+                <NavLink
+                  activeClassName='active'
+                  exact
+                  tag={ RRNavLink }
+                  to='/about'>
+                  About
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={ Link } to='/projects' >Projects</NavLink>
+                <NavLink
+                  activeClassName='active'
+                  exact
+                  tag={ RRNavLink }
+                  to='/projects'>
+                  Projects
+                </NavLink>
               </NavItem>            
               <NavItem>
                 <NavLink href='https://stats.chrisvogt.me'>Stats</NavLink>
