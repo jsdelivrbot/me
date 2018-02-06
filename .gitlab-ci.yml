@@ -16,4 +16,5 @@ unit:
   script:
     - npm install --global yarn
     - yarn
+    - yarn run build-css
     - yarn run test
