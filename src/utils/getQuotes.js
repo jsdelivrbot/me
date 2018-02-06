@@ -2,11 +2,8 @@ const quotesPath = 'https://cdn.rawgit.com/chrisvogt/49b51791348a09cbddb0/raw/58
 
 export const getQuotes = () => {
   return fetch(quotesPath)
-    .then(response => {
-      return response.json();
-    })
+    .then(response => response.json())
     .catch(error => {
-      // TODO: throw this
-      return error;
+      throw error;
     });
 };

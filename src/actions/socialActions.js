@@ -1,5 +1,15 @@
 import getSocial from '../utils/getSocial';
-import { LOAD_SOCIAL_SUCCESS } from '../constants/actionTypes';
+import {
+  LOAD_SOCIAL_FAILURE,
+  LOAD_SOCIAL_SUCCESS
+} from '../constants/actionTypes';
+
+export const loadSocialFailure = error => {
+	return {
+		type: LOAD_SOCIAL_FAILURE,
+		error
+	};
+};
 
 export const loadSocialSuccess = social => {
 	return {
@@ -8,11 +18,11 @@ export const loadSocialSuccess = social => {
 	};
 };
 
-export const loadSocial = dispatch => {
-  return getSocial().then(social => {
+export const loadSocial = async dispatch => {
+  try {
+    const social = await getSocial();
     dispatch(loadSocialSuccess(social));
-  }).catch(error => {
-    // TODO: LOAD_SOCIAL_FAILURE
-    throw(error);
-  });
+  } catch (error) {
+    dispatch(loadSocialFailure(error));
+  }
 };
