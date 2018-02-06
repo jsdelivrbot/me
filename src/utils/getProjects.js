@@ -7,6 +7,6 @@ export default () => {
     })
     .catch(error => {
       // TODO: throw this
-      return error;
+      throw error;
     });
 };

@@ -21,13 +21,6 @@ const Home = () => {
           headline={ 'CHRIS VOGT' }
           subhead={ 'Software Engineer in San Francisco' }
         >
-          <a
-            className="twitter-follow-button"
-            data-dnt="true"
-            href="https://twitter.com/c1v0"
-          >
-            Follow @c1v0
-          </a>
           <GithubCorner
             bannerColor="#c5b358"
             direction="right"
@@ -43,7 +36,7 @@ const Home = () => {
       
       <PageTitle
         title='Dashboard'
-        subtitle='Recent Content'
+        subtitle='Featured Content'
       />
       <Projects />
     </Page>

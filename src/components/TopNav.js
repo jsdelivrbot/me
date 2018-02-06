@@ -35,12 +35,12 @@ export default class TopNav extends React.Component {
             <Nav className='ml-auto' navbar>
               <NavItem>
                 <NavLink tag={ Link } to='/about' >About</NavLink>
-              </NavItem>            
-              <NavItem>
-                <NavLink href='#'>Stats</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href='#'>Developer Story</NavLink>
+                <NavLink tag={ Link } to='/projects' >Projects</NavLink>
+              </NavItem>            
+              <NavItem>
+                <NavLink href='https://stats.chrisvogt.me'>Stats</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

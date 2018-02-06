@@ -3,6 +3,7 @@ import {
   Button,
   Card,
   CardBody,
+  CardFooter,
   CardHeader,
   CardImg,
   CardText,
@@ -21,13 +22,15 @@ const ProjectCard = props => {
     <Card>
       <CardHeader tag="h6">Project</CardHeader>
       <CardImg top width="100%" src={ bannerUrl } alt={ name } />
-      <CardBody>
+      <CardBody className='text-left'>
         <CardTitle>{ name }</CardTitle>
         <CardText className='d-sm-none d-md-block'>{ description }</CardText>
+      </CardBody>
+      <CardFooter>
         <Link to={ `/projects/${ slug }` }>
           <Button className='btn-elevated' color='www btn-primary'>View Project</Button>
         </Link>
-      </CardBody>
+      </CardFooter>
     </Card>
   );
 };
