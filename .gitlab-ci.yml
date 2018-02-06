@@ -1,0 +1,19 @@
+build:
+  image: node:latest
+  stage: build
+  script:
+    - npm install --global yarn
+    - yarn
+    - yarn run build
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist
+
+unit:
+  image: node:latest
+  stage: test
+  script:
+    - npm install --global yarn
+    - yarn
+    - yarn run test
