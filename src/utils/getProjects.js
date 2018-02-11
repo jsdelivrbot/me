@@ -1,4 +1,4 @@
-const projectsPath = 'https://chrisvogt.firebaseio.com/projects.json';
+const projectsPath = 'http://localhost:3030/api/v1/projects.json';
 
 export default () => {
   return fetch(projectsPath)

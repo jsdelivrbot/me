@@ -1,4 +1,4 @@
-const socialPath = 'https://chrisvogt.firebaseio.com/profiles.json';
+const socialPath = 'http://localhost:3030/api/v1/profiles.json';
 
 export default () => {
   return fetch(socialPath)
