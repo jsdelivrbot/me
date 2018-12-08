@@ -111,7 +111,7 @@
       "thumb_url" : "https://res.cloudinary.com/chrisvogt/image/upload/c_scale,w_150/v1444612976/thumbs/jquery-recentreads.jpg"
     },
     "kildekoden" : {
-      "banner_url" : "https://cdn.rawgit.com/kildekoden/kildekoden/master/source/webroot/img/banner.jpg",
+      "banner_url" : "https://cdn.jsdelivr.net/gh/kildekoden/kildekoden/source/webroot/img/banner.jpg",
       "category" : "project",
       "created" : "2015-08-11T05:14:43Z",
       "demo_url" : "http://kildekoden.com",
@@ -141,7 +141,7 @@
       "thumb_url" : "https://res.cloudinary.com/chrisvogt/image/upload/c_scale,w_150/v1443426010/thumbs/ui-layout.jpg"
     },
     "primality" : {
-      "banner_url" : "https://cdn.rawgit.com/chrisvogt/primality/develop/img/og-banner.jpg",
+      "banner_url" : "https://cdn.jsdelivr.net/gh/chrisvogt/primality@develop/img/og-banner.jpg",
       "category" : "experiment",
       "created" : "2015-04-14T22:19:21Z",
       "demo_url" : "http://chrisvogt.github.io/primality/",
@@ -156,7 +156,7 @@
       "thumb_url" : "https://res.cloudinary.com/chrisvogt/image/upload/v1450821365/thumbs/150/primality.png"
     },
     "projects" : {
-      "banner_url" : "https://cdn.rawgit.com/chrisvogt/projects/master/img/og-banner.png",
+      "banner_url" : "https://cdn.jsdelivr.net/gh/chrisvogt/projects/img/og-banner.png",
       "category" : "legacy",
       "created" : "2015-05-12T07:59:38Z",
       "demo_url" : "https://projects.chrisvogt.me",
@@ -186,7 +186,7 @@
       "thumb_url" : "https://res.cloudinary.com/chrisvogt/image/upload/v1450821365/thumbs/150/stats.png"
     },
     "teacher-salaries" : {
-      "banner_url" : "https://cdn.rawgit.com/teacherdata/salaries/b3c71d43/public/banner.png",
+      "banner_url" : "https://cdn.jsdelivr.net/gh/teacherdata/salaries@b3c71d43/public/banner.png",
       "category" : "project",
       "created" : "2015-09-15T05:53:17Z",
       "demo_url" : "http://teachersalary.info",
@@ -201,7 +201,7 @@
       "thumb_url" : "https://res.cloudinary.com/chrisvogt/image/upload/v1450821365/thumbs/150/teacher-salaries.png"
     },
     "wowchar" : {
-      "banner_url" : "https://cdn.rawgit.com/chrisvogt/wowchar-info/6a28fc0c/fos/images/og-banner.jpg",
+      "banner_url" : "https://cdn.jsdelivr.net/gh/chrisvogt/wowchar-info@6a28fc0c/fos/images/og-banner.jpg",
       "category" : "project",
       "created" : "2015-04-07T22:38:09Z",
       "demo_url" : "http://wowchar.info",
